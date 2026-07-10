@@ -19,7 +19,8 @@ export default function About() {
             Shipping AI since year two — self-taught by building. End-to-end: training, evaluation, live deployments.
           </p>
           <p className="text-dim leading-relaxed text-lg">
-            I care about <span className="text-white">clean architecture, measurable outcomes</span>, and the boring, useful parts of AI —{' '}
+            I care about <span className="text-white">clean architecture, measurable outcomes</span>, and the parts of AI{' '}
+            <span className="text-white">that break in production</span> —{' '}
             <span className="text-white">evaluation, grounding, retrieval, agentic workflows</span>.
             Where papers become products.
           </p>

@@ -71,7 +71,7 @@ export default function Hero() {
                 aria-label="Jaya Arora"
                 className="w-14 h-14 rounded-full border-2 border-brand-blue/40 shadow-[0_0_24px_rgba(56,189,248,0.35)] bg-bg2"
                 style={{
-                  backgroundImage: 'url(/jaya.png)',
+                  backgroundImage: 'url(/jaya.jpg)',
                   backgroundSize: '88%',
                   backgroundPosition: 'center 22%',
                   backgroundRepeat: 'no-repeat'
