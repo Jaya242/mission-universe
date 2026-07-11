@@ -138,13 +138,31 @@ export default function Contact() {
 
           {/* RIGHT: form card */}
           <form
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={(e) => {
+              e.preventDefault()
+              const data = new FormData(e.currentTarget)
+              const name = (data.get('name') || '').toString().trim()
+              const email = (data.get('email') || '').toString().trim()
+              const message = (data.get('message') || '').toString().trim()
+
+              if (!message) {
+                alert('Add a message before sending.')
+                return
+              }
+
+              const subject = encodeURIComponent(`Portfolio contact — ${name || 'visitor'}`)
+              const body = encodeURIComponent(
+                `${message}\n\n— ${name || 'Anonymous'}${email ? ` · ${email}` : ''}`
+              )
+              window.location.href = `mailto:jayaarora2402@gmail.com?subject=${subject}&body=${body}`
+            }}
             className="rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:p-8 space-y-5"
           >
             <div>
               <label className="eyebrow-sm text-dim">NAME</label>
               <input
                 type="text"
+                name="name"
                 placeholder="Your name"
                 className="mt-2.5 w-full bg-white/[0.02] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-dim/60 focus:outline-none focus:border-brand-blue/60 focus:bg-white/[0.04] transition-colors"
               />
@@ -153,6 +171,7 @@ export default function Contact() {
               <label className="eyebrow-sm text-dim">EMAIL</label>
               <input
                 type="email"
+                name="email"
                 placeholder="you@example.com"
                 className="mt-2.5 w-full bg-white/[0.02] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-dim/60 focus:outline-none focus:border-brand-blue/60 focus:bg-white/[0.04] transition-colors"
               />
@@ -161,6 +180,8 @@ export default function Contact() {
               <label className="eyebrow-sm text-dim">MESSAGE</label>
               <textarea
                 rows="5"
+                name="message"
+                required
                 placeholder="Hello, I'd like to..."
                 className="mt-2.5 w-full bg-white/[0.02] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-dim/60 focus:outline-none focus:border-brand-blue/60 focus:bg-white/[0.04] transition-colors resize-none"
               />
@@ -171,6 +192,13 @@ export default function Contact() {
             >
               Send Message <PaperPlaneIcon />
             </button>
+            <p className="text-dim text-xs text-center pt-1">
+              Opens your mail app · or write to{' '}
+              <a href="mailto:jayaarora2402@gmail.com" className="text-brand-blue hover:underline">
+                jayaarora2402@gmail.com
+              </a>{' '}
+              directly.
+            </p>
           </form>
         </div>
       </div>
