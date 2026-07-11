@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 function MailIcon() {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -38,6 +40,43 @@ function PaperPlaneIcon() {
 }
 
 export default function Contact() {
+  const [status, setStatus] = useState('idle') // idle | sending | sent | error
+
+  async function handleSubmit(e) {
+    e.preventDefault()
+    const form = e.currentTarget
+    const data = new FormData(form)
+    const name = (data.get('name') || '').toString().trim()
+    const email = (data.get('email') || '').toString().trim()
+    const message = (data.get('message') || '').toString().trim()
+
+    if (!message) return
+
+    setStatus('sending')
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/jayaarora2402@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: name || 'Anonymous',
+          email: email || 'no-reply@portfolio',
+          message,
+          _subject: `Portfolio — ${name || 'new message'}`,
+          _template: 'table',
+          _captcha: 'false'
+        })
+      })
+      if (res.ok) {
+        setStatus('sent')
+        form.reset()
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
+  }
+
   return (
     <section id="contact" className="relative z-10 py-24 md:py-32 px-6 md:px-12 overflow-hidden">
       {/* Floating ambient dots */}
@@ -138,24 +177,7 @@ export default function Contact() {
 
           {/* RIGHT: form card */}
           <form
-            onSubmit={(e) => {
-              e.preventDefault()
-              const data = new FormData(e.currentTarget)
-              const name = (data.get('name') || '').toString().trim()
-              const email = (data.get('email') || '').toString().trim()
-              const message = (data.get('message') || '').toString().trim()
-
-              if (!message) {
-                alert('Add a message before sending.')
-                return
-              }
-
-              const subject = encodeURIComponent(`Portfolio contact — ${name || 'visitor'}`)
-              const body = encodeURIComponent(
-                `${message}\n\n— ${name || 'Anonymous'}${email ? ` · ${email}` : ''}`
-              )
-              window.location.href = `mailto:jayaarora2402@gmail.com?subject=${subject}&body=${body}`
-            }}
+            onSubmit={handleSubmit}
             className="rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:p-8 space-y-5"
           >
             <div>
@@ -188,17 +210,38 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="w-full flex items-center justify-center gap-2.5 bg-brand-blue text-[#04101f] font-head font-bold text-base rounded-xl py-4 hover:brightness-110 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(56,189,248,0.35)] transition-all"
+              disabled={status === 'sending' || status === 'sent'}
+              className="w-full flex items-center justify-center gap-2.5 bg-brand-blue text-[#04101f] font-head font-bold text-base rounded-xl py-4 hover:brightness-110 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(56,189,248,0.35)] transition-all disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none"
             >
-              Send Message <PaperPlaneIcon />
+              {status === 'sending' && <>Sending…</>}
+              {status === 'sent' && <>Sent ✓</>}
+              {status === 'error' && <>Retry <PaperPlaneIcon /></>}
+              {status === 'idle' && <>Send Message <PaperPlaneIcon /></>}
             </button>
-            <p className="text-dim text-xs text-center pt-1">
-              Opens your mail app · or write to{' '}
-              <a href="mailto:jayaarora2402@gmail.com" className="text-brand-blue hover:underline">
-                jayaarora2402@gmail.com
-              </a>{' '}
-              directly.
-            </p>
+
+            {status === 'sent' && (
+              <p className="text-[#8bd685] text-sm text-center pt-1">
+                Thanks — I'll reply within the day.
+              </p>
+            )}
+            {status === 'error' && (
+              <p className="text-brand-pink text-sm text-center pt-1">
+                Couldn't send — please write to{' '}
+                <a href="mailto:jayaarora2402@gmail.com" className="text-brand-blue hover:underline">
+                  jayaarora2402@gmail.com
+                </a>{' '}
+                directly.
+              </p>
+            )}
+            {status === 'idle' && (
+              <p className="text-dim text-xs text-center pt-1">
+                Or write to{' '}
+                <a href="mailto:jayaarora2402@gmail.com" className="text-brand-blue hover:underline">
+                  jayaarora2402@gmail.com
+                </a>{' '}
+                directly.
+              </p>
+            )}
           </form>
         </div>
       </div>
