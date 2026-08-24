@@ -1,46 +1,46 @@
 import Section from './Section.jsx'
 
 const nodes = [
-  { x: 70,  y: 160, label: 'Python',           color: '#e6f0ff', size: 6 },
-  { x: 200, y: 85,  label: 'PyTorch',          color: '#e6f0ff', size: 6 },
-  { x: 200, y: 235, label: 'CNN',              color: '#38BDF8', size: 5 },
-  { x: 350, y: 55,  label: 'Transformers',     color: '#38BDF8', size: 6 },
-  { x: 350, y: 205, label: 'Deployment',       color: '#34D399', size: 5 },
-  { x: 500, y: 135, label: 'LangChain',        color: '#818cf8', size: 7 },
-  { x: 510, y: 255, label: 'LangGraph',        color: '#818cf8', size: 5 },
-  { x: 640, y: 65,  label: 'Llama-3',          color: '#818cf8', size: 5 },
-  { x: 660, y: 215, label: 'Vector Databases', color: '#F472B6', size: 5 },
-  { x: 800, y: 145, label: 'RAG tuning',       color: '#F472B6', size: 6 }
+  { x: 70,  y: 160, label: 'Python',                color: '#e6f0ff', size: 6 },
+  { x: 190, y: 90,  label: 'PyTorch',               color: '#e6f0ff', size: 6 },
+  { x: 190, y: 240, label: 'YOLOv8',                color: '#F472B6', size: 6 },
+  { x: 330, y: 55,  label: 'Transformers',          color: '#38BDF8', size: 6 },
+  { x: 410, y: 165, label: 'DistilBERT',            color: '#38BDF8', size: 7 },
+  { x: 500, y: 90,  label: 'sentence-transformers', color: '#818cf8', size: 6 },
+  { x: 520, y: 250, label: 'MiniLM',                color: '#818cf8', size: 5 },
+  { x: 670, y: 200, label: 'FAISS',                 color: '#818cf8', size: 6 },
+  { x: 770, y: 130, label: 'Streamlit',             color: '#34D399', size: 6 },
+  { x: 800, y: 55,  label: 'HF Spaces',             color: '#34D399', size: 5 }
 ]
 
 const edges = [
-  ['Python',           'PyTorch',            18],
-  ['Python',           'CNN',               -18],
-  ['PyTorch',          'Transformers',       22],
-  ['CNN',              'Deployment',       -16],
-  ['Transformers',     'Deployment',         0],
-  ['Transformers',     'Llama-3',            22],
-  ['Deployment',      'LangChain',          14],
-  ['LangChain',        'LangGraph',          16],
-  ['LangChain',        'Llama-3',           -18],
-  ['LangChain',        'Vector Databases',   12],
-  ['Vector Databases', 'RAG tuning',        -14],
-  ['Llama-3',          'RAG tuning',         18]
+  ['Python',                'PyTorch',                 18],
+  ['Python',                'YOLOv8',                 -18],
+  ['PyTorch',               'Transformers',            22],
+  ['Transformers',          'DistilBERT',              14],
+  ['Transformers',          'sentence-transformers',  -16],
+  ['sentence-transformers', 'MiniLM',                 -14],
+  ['sentence-transformers', 'FAISS',                   12],
+  ['DistilBERT',            'MiniLM',                  16],
+  ['DistilBERT',            'Streamlit',               18],
+  ['MiniLM',                'FAISS',                  -12],
+  ['YOLOv8',                'HF Spaces',              -18],
+  ['Streamlit',             'HF Spaces',               14]
 ]
 
 const groups = [
-  { title: 'Core',         glyph: '{ }', color: '#e6f0ff', items: ['Python', 'C++', 'TypeScript', 'JavaScript', 'Git · GitHub', 'Cursor · Claude Code (vibe coding)'] },
-  { title: 'AI / ML',      glyph: '∇',   color: '#38BDF8', items: ['PyTorch', 'Transformers', 'CNN', 'Transfer Learning', 'Scikit-Learn', 'HuggingFace'] },
-  { title: 'Vision',       glyph: '◈',   color: '#F472B6', items: ['Object Detection', 'Tracking', 'OpenCV', 'GradCAM'] },
-  { title: 'LLM & Agents', glyph: '✧',   color: '#818cf8', items: ['LangChain', 'LangGraph', 'Llama-3', 'RAG tuning', 'Vector Databases', 'Claude · OpenAI APIs'] },
-  { title: 'Deployment',   glyph: '⚡',   color: '#34D399', items: ['FastAPI', 'Docker', 'HuggingFace Spaces', 'Vercel', 'Streamlit', 'Gradio'] }
+  { title: 'Core',            glyph: '{ }', color: '#e6f0ff', items: ['Python', 'C++', 'TypeScript', 'JavaScript', 'Git · GitHub', 'Cursor · Claude Code (vibe coding)'] },
+  { title: 'ML core',         glyph: '∇',   color: '#38BDF8', items: ['PyTorch', 'HuggingFace Transformers', 'DistilBERT', 'Transfer Learning', 'AdamW · warmup schedules'] },
+  { title: 'NLP & Retrieval', glyph: '✧',   color: '#818cf8', items: ['sentence-transformers', 'MiniLM (bi-encoder)', 'NLI cross-encoders', 'FAISS', 'Retrieval-augmented eval'] },
+  { title: 'Computer Vision', glyph: '◈',   color: '#F472B6', items: ['YOLOv8 (Ultralytics)', 'ByteTrack', 'OpenCV', 'Object detection', 'Multi-object tracking'] },
+  { title: 'Deployment',      glyph: '⚡',   color: '#34D399', items: ['Streamlit', 'Streamlit Community Cloud', 'Gradio', 'HuggingFace Spaces', 'Docker', 'GitHub Releases · Git LFS'] }
 ]
 
 const legend = [
   { color: '#e6f0ff', label: 'Foundation' },
   { color: '#38BDF8', label: 'ML core' },
-  { color: '#818cf8', label: 'LLM stack' },
-  { color: '#F472B6', label: 'Retrieval' },
+  { color: '#818cf8', label: 'NLP / Retrieval' },
+  { color: '#F472B6', label: 'Computer Vision' },
   { color: '#34D399', label: 'Deployment' }
 ]
 

@@ -84,7 +84,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <h1 className="hero-headline leading-[1.08] text-[44px] sm:text-[58px] md:text-[72px] lg:text-[84px] xl:text-[92px]">
+          <h1 className="hero-headline leading-[1.08] text-[36px] sm:text-[48px] md:text-[58px] lg:text-[68px] xl:text-[74px]">
             I build AI that<br />
             <span className="grad-text">sees, understands<br />and reasons.</span>
           </h1>

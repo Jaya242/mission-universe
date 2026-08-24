@@ -12,7 +12,8 @@ const projects = [
     tech: ['PyTorch', 'DistilBERT', 'LangChain', 'Gradio', 'HF Spaces'],
     source: 'https://github.com/Jaya242/crisis-search-reranker',
     demo: '#',
-    accent: 'from-brand-purple/40 to-brand-pink/30'
+    accent: 'from-brand-purple/40 to-brand-pink/30',
+    image: '/crisis-search.png'
   },
   {
     id: 'project-grounding-harness',
@@ -41,31 +42,6 @@ const projects = [
     demo: '#',
     accent: 'from-brand-pink/40 to-brand-blue/30',
     image: '/traffic-detection.jpg'
-  }
-]
-
-const starMission = {
-  tag: '★ Star mission',
-  title: 'LLM Chatbot — extensive multi-agent stack',
-  hint: 'Full-scale conversational AI. Llama-3 for reasoning, LangChain + LangGraph for orchestration, deep RAG tuning for grounded answers, Langflow for visual pipeline design. The one I want to build next.',
-  tech: ['Llama-3', 'LangChain', 'LangGraph', 'RAG tuning', 'Langflow']
-}
-
-const futureMissions = [
-  {
-    tag: 'Mission 05',
-    title: 'Multi-input RAG Chatbot',
-    hint: 'Retrieval across text, images, and docs — a chatbot that reasons across modalities.'
-  },
-  {
-    tag: 'Mission 06',
-    title: 'Instagram GPT',
-    hint: 'Semantic search over saved reels · Chrome extension + FastAPI backend.'
-  },
-  {
-    tag: 'Mission 07',
-    title: 'Backend deep-dive',
-    hint: 'A production-grade backend project to complement the AI stack — scope in progress.'
   }
 ]
 
@@ -138,85 +114,6 @@ export default function Projects() {
             </div>
           </article>
         ))}
-      </div>
-
-      {/* Future missions — coming soon */}
-      <div id="future-missions" className="scroll-mt-28 mt-16">
-        <div className="eyebrow-lg text-brand-purple mb-6 flex items-center gap-3">
-          <span className="w-1.5 h-1.5 rounded-full bg-brand-purple animate-pulse" />
-          Future missions
-          <span className="eyebrow-sm text-dim">/ what's coming</span>
-        </div>
-
-        {/* Star mission — full width, highlighted */}
-        <div className="relative rounded-2xl border border-brand-purple/50 bg-gradient-to-br from-brand-purple/[0.14] via-brand-blue/[0.06] to-transparent p-7 md:p-9 mb-5 overflow-hidden shadow-[0_0_50px_rgba(108,99,255,0.18)]">
-          {/* Corner glow */}
-          <div
-            className="absolute -top-16 -right-16 w-56 h-56 rounded-full blur-3xl opacity-40 pointer-events-none"
-            style={{ background: '#818cf8' }}
-          />
-          {/* Sparks */}
-          <div className="absolute top-5 right-6 eyebrow-sm text-brand-purple/80 flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-purple animate-pulse" style={{ boxShadow: '0 0 8px #818cf8' }} />
-            Next up
-          </div>
-
-          <div className="relative z-10 grid md:grid-cols-[1.4fr_1fr] gap-6 md:gap-10 items-start">
-            <div>
-              <div className="eyebrow text-brand-purple mb-3 flex items-center gap-2">
-                <span className="text-yellow-300 text-lg">★</span> Star mission
-              </div>
-              <h3 className="font-head text-2xl md:text-3xl font-bold leading-tight">
-                {starMission.title}
-              </h3>
-              <p className="text-dim mt-4 leading-relaxed max-w-xl">{starMission.hint}</p>
-              <div className="flex flex-wrap gap-2 mt-5">
-                {starMission.tech.map((t) => (
-                  <span
-                    key={t}
-                    className="eyebrow-sm px-3 py-1 rounded-full border border-brand-purple/40 bg-brand-purple/10 text-brand-purple/90"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Right accent block: mission-brief-style */}
-            <div className="rounded-xl border border-white/10 bg-black/30 backdrop-blur-sm p-5 font-mono text-[13px] text-dim space-y-2">
-              <div><span className="text-brand-purple">status</span> : <span className="text-white">specced</span></div>
-              <div><span className="text-brand-purple">focus</span>  : <span className="text-white">conversational reasoning</span></div>
-              <div><span className="text-brand-purple">stack</span>  : <span className="text-white">llama-3 · langchain</span></div>
-              <div className="pl-[52px]"><span className="text-white">langgraph · rag · langflow</span></div>
-              <div><span className="text-brand-purple">then</span>   : <span className="text-white">→ full agents</span></div>
-            </div>
-          </div>
-        </div>
-
-        {/* Other future missions in 3-col grid */}
-        <div className="grid md:grid-cols-3 gap-5">
-          {futureMissions.map((m, i) => (
-            <div
-              key={i}
-              className="relative rounded-2xl border border-dashed border-white/15 bg-white/[0.015] p-6 min-h-[180px] hover:border-brand-purple/40 transition-colors group"
-            >
-              <div className="absolute top-4 right-4 eyebrow-sm text-brand-purple/70">Coming soon</div>
-              <div className="eyebrow-sm text-dim">{m.tag}</div>
-              <div className="font-head text-xl font-bold mt-3 text-white/80 group-hover:text-white transition-colors">
-                {m.title}
-              </div>
-              <div className="text-dim text-sm mt-2 leading-relaxed">{m.hint}</div>
-              <div className="absolute bottom-5 right-6 eyebrow-sm text-brand-purple/50">◆</div>
-            </div>
-          ))}
-        </div>
-
-        {/* Trailing note about agents */}
-        <div className="mt-6 flex items-center gap-3 eyebrow-sm text-dim">
-          <span className="w-8 h-px bg-white/20" />
-          <span className="text-brand-purple">◆</span>
-          Then — into agents.
-        </div>
       </div>
     </Section>
   )
