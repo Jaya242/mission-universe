@@ -1,6 +1,6 @@
 export default function Section({ id, eyebrow, title, sub, children, className = '' }) {
   return (
-    <section id={id} className={`relative z-10 max-w-6xl mx-auto px-6 md:px-12 py-24 md:py-32 ${className}`}>
+    <section id={id} className={`relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32 ${className}`}>
       {(eyebrow || title || sub) && (
         <div className="text-center mb-16">
           {eyebrow && (
@@ -10,10 +10,10 @@ export default function Section({ id, eyebrow, title, sub, children, className =
             </div>
           )}
           {title && (
-            <h2 className="font-head text-3xl md:text-4xl font-medium">{title}</h2>
+            <h2 className="font-head text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.1]">{title}</h2>
           )}
           {sub && (
-            <p className="text-dim mt-4 max-w-lg mx-auto">{sub}</p>
+            <p className="text-dim text-lg mt-5 max-w-2xl mx-auto leading-relaxed">{sub}</p>
           )}
         </div>
       )}
