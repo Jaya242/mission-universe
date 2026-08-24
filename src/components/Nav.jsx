@@ -37,7 +37,7 @@ export default function Nav() {
         scrolled ? 'py-3 bg-bg/85 backdrop-blur-xl border-b border-white/10' : 'py-6 bg-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 md:px-12 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-1.5 group">
           <span className="font-head text-base font-bold tracking-tight group-hover:text-brand-blue transition-colors">
             Jaya

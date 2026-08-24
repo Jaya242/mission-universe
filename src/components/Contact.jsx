@@ -92,69 +92,69 @@ export default function Contact() {
       <span className="absolute bottom-32 left-24 w-1.5 h-1.5 rounded-full bg-brand-blue/50 blur-[1px]" style={{boxShadow:'0 0 20px #38BDF8'}} />
       <span className="absolute top-24 right-1/3 w-1 h-1 rounded-full bg-brand-blue/70 blur-[1px]" style={{boxShadow:'0 0 16px #38BDF8'}} />
 
-      <div className="max-w-6xl mx-auto relative">
+      <div className="max-w-7xl mx-auto relative">
         {/* Section pill */}
-        <div className="inline-flex items-center gap-2 mb-10 px-4 py-1.5 rounded-full border border-brand-blue/30 bg-brand-blue/[0.05]">
-          <span className="w-1.5 h-1.5 rounded-full bg-brand-blue" style={{ boxShadow: '0 0 8px #38BDF8' }} />
-          <span className="eyebrow-sm text-brand-blue">05 · Contact</span>
+        <div className="inline-flex items-center gap-2 mb-10 px-5 py-2 rounded-full border border-brand-blue/30 bg-brand-blue/[0.05]">
+          <span className="w-2 h-2 rounded-full bg-brand-blue" style={{ boxShadow: '0 0 8px #38BDF8' }} />
+          <span className="eyebrow text-brand-blue">05 · Contact</span>
         </div>
 
         {/* Heading + sub */}
-        <h2 className="hero-headline text-5xl md:text-6xl lg:text-7xl leading-[1.05]">
+        <h2 className="hero-headline text-6xl md:text-7xl lg:text-8xl xl:text-[112px] leading-[1.02]">
           Let's build something.
         </h2>
-        <p className="text-dim text-lg max-w-md leading-relaxed mt-6 mb-16">
+        <p className="text-dim text-xl md:text-2xl max-w-2xl leading-relaxed mt-8 mb-20">
           Open to Gen AI / ML internships and interesting projects. I reply same day.
         </p>
 
         {/* 2-column layout */}
-        <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-start">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
           {/* LEFT: contact info */}
-          <div className="space-y-6">
+          <div className="space-y-8">
             {/* Email row */}
-            <a href="mailto:jayaarora2402@gmail.com" className="flex items-center gap-5 group">
-              <div className="w-12 h-12 rounded-xl border border-brand-blue/25 bg-brand-blue/[0.04] flex items-center justify-center text-brand-blue group-hover:bg-brand-blue/[0.09] group-hover:border-brand-blue/50 transition-colors">
+            <a href="mailto:jayaarora2402@gmail.com" className="flex items-center gap-6 group">
+              <div className="w-16 h-16 rounded-2xl border border-brand-blue/25 bg-brand-blue/[0.04] flex items-center justify-center text-brand-blue group-hover:bg-brand-blue/[0.09] group-hover:border-brand-blue/50 transition-colors shrink-0">
                 <MailIcon />
               </div>
               <div>
-                <div className="eyebrow-sm text-dim">EMAIL</div>
-                <div className="font-head font-medium text-white mt-1 group-hover:text-brand-blue transition-colors">
+                <div className="eyebrow text-dim">EMAIL</div>
+                <div className="font-head text-xl md:text-2xl font-medium text-white mt-1.5 group-hover:text-brand-blue transition-colors">
                   jayaarora2402@gmail.com
                 </div>
               </div>
             </a>
 
             {/* Phone row */}
-            <a href="tel:+917905397315" className="flex items-center gap-5 group">
-              <div className="w-12 h-12 rounded-xl border border-brand-blue/25 bg-brand-blue/[0.04] flex items-center justify-center text-brand-blue group-hover:bg-brand-blue/[0.09] group-hover:border-brand-blue/50 transition-colors">
+            <a href="tel:+917905397315" className="flex items-center gap-6 group">
+              <div className="w-16 h-16 rounded-2xl border border-brand-blue/25 bg-brand-blue/[0.04] flex items-center justify-center text-brand-blue group-hover:bg-brand-blue/[0.09] group-hover:border-brand-blue/50 transition-colors shrink-0">
                 <PhoneIcon />
               </div>
               <div>
-                <div className="eyebrow-sm text-dim">PHONE</div>
-                <div className="font-head font-medium text-white mt-1 group-hover:text-brand-blue transition-colors">
+                <div className="eyebrow text-dim">PHONE</div>
+                <div className="font-head text-xl md:text-2xl font-medium text-white mt-1.5 group-hover:text-brand-blue transition-colors">
                   +91 79053 97315
                 </div>
               </div>
             </a>
 
             {/* Location row */}
-            <div className="flex items-center gap-5">
-              <div className="w-12 h-12 rounded-xl border border-brand-blue/25 bg-brand-blue/[0.04] flex items-center justify-center text-brand-blue">
+            <div className="flex items-center gap-6">
+              <div className="w-16 h-16 rounded-2xl border border-brand-blue/25 bg-brand-blue/[0.04] flex items-center justify-center text-brand-blue shrink-0">
                 <PinIcon />
               </div>
               <div>
-                <div className="eyebrow-sm text-dim">LOCATION</div>
-                <div className="font-head font-medium text-white mt-1">Allahabad, India</div>
+                <div className="eyebrow text-dim">LOCATION</div>
+                <div className="font-head text-xl md:text-2xl font-medium text-white mt-1.5">Allahabad, India</div>
               </div>
             </div>
 
             {/* Socials row */}
-            <div className="flex items-center gap-7 pt-1">
+            <div className="flex items-center gap-8 pt-2">
               <a
                 href="https://github.com/Jaya242"
                 target="_blank"
                 rel="noopener"
-                className="flex items-center gap-2 font-head text-white/70 hover:text-white transition-colors"
+                className="flex items-center gap-2.5 font-head text-lg text-white/70 hover:text-white transition-colors"
               >
                 <GithubIcon /> GitHub
               </a>
@@ -162,34 +162,34 @@ export default function Contact() {
                 href="https://linkedin.com/in/jaya-arora-6892a93a0"
                 target="_blank"
                 rel="noopener"
-                className="flex items-center gap-2 font-head text-white/70 hover:text-white transition-colors"
+                className="flex items-center gap-2.5 font-head text-lg text-white/70 hover:text-white transition-colors"
               >
                 <LinkedinIcon /> LinkedIn
               </a>
             </div>
 
             {/* Resume button */}
-            <div className="pt-2">
+            <div className="pt-3">
               <a
                 href="/Jaya-Arora-Resume.pdf"
                 target="_blank"
                 rel="noopener"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-white/15 bg-white/[0.04] hover:bg-white/[0.08] hover:border-white/25 transition-colors font-head font-medium text-sm"
+                className="inline-flex items-center gap-2.5 px-7 py-4 rounded-xl border border-white/15 bg-white/[0.04] hover:bg-white/[0.08] hover:border-white/25 transition-colors font-head font-medium text-base"
               >
-                Download Resume <span className="text-xs">↗</span>
+                Download Resume <span className="text-sm">↗</span>
               </a>
             </div>
 
             {/* Currently Available card */}
-            <div className="mt-6 p-5 rounded-2xl border border-brand-blue/25 bg-brand-blue/[0.03]">
-              <div className="flex items-center gap-2 font-head font-medium text-brand-blue">
+            <div className="mt-8 p-7 rounded-2xl border border-brand-blue/25 bg-brand-blue/[0.03]">
+              <div className="flex items-center gap-2.5 font-head text-lg font-medium text-brand-blue">
                 <span
-                  className="w-2 h-2 rounded-full bg-brand-blue animate-pulse"
+                  className="w-2.5 h-2.5 rounded-full bg-brand-blue animate-pulse"
                   style={{ boxShadow: '0 0 8px #38BDF8' }}
                 />
                 Currently Available
               </div>
-              <p className="text-dim text-sm mt-2 leading-relaxed">
+              <p className="text-dim text-base mt-3 leading-relaxed">
                 Open to <span className="text-white">Gen AI / ML internships</span> and collaborations · starting 2026.
               </p>
             </div>
@@ -198,40 +198,40 @@ export default function Contact() {
           {/* RIGHT: form card */}
           <form
             onSubmit={handleSubmit}
-            className="rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:p-8 space-y-5"
+            className="rounded-2xl border border-white/10 bg-white/[0.02] p-9 md:p-10 space-y-6"
           >
             <div>
-              <label className="eyebrow-sm text-dim">NAME</label>
+              <label className="eyebrow text-dim">NAME</label>
               <input
                 type="text"
                 name="name"
                 placeholder="Your name"
-                className="mt-2.5 w-full bg-white/[0.02] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-dim/60 focus:outline-none focus:border-brand-blue/60 focus:bg-white/[0.04] transition-colors"
+                className="mt-3 w-full bg-white/[0.02] border border-white/10 rounded-xl px-5 py-4 text-lg text-white placeholder-dim/60 focus:outline-none focus:border-brand-blue/60 focus:bg-white/[0.04] transition-colors"
               />
             </div>
             <div>
-              <label className="eyebrow-sm text-dim">EMAIL</label>
+              <label className="eyebrow text-dim">EMAIL</label>
               <input
                 type="email"
                 name="email"
                 placeholder="you@example.com"
-                className="mt-2.5 w-full bg-white/[0.02] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-dim/60 focus:outline-none focus:border-brand-blue/60 focus:bg-white/[0.04] transition-colors"
+                className="mt-3 w-full bg-white/[0.02] border border-white/10 rounded-xl px-5 py-4 text-lg text-white placeholder-dim/60 focus:outline-none focus:border-brand-blue/60 focus:bg-white/[0.04] transition-colors"
               />
             </div>
             <div>
-              <label className="eyebrow-sm text-dim">MESSAGE</label>
+              <label className="eyebrow text-dim">MESSAGE</label>
               <textarea
-                rows="5"
+                rows="6"
                 name="message"
                 required
                 placeholder="Hello, I'd like to..."
-                className="mt-2.5 w-full bg-white/[0.02] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-dim/60 focus:outline-none focus:border-brand-blue/60 focus:bg-white/[0.04] transition-colors resize-none"
+                className="mt-3 w-full bg-white/[0.02] border border-white/10 rounded-xl px-5 py-4 text-lg text-white placeholder-dim/60 focus:outline-none focus:border-brand-blue/60 focus:bg-white/[0.04] transition-colors resize-none"
               />
             </div>
             <button
               type="submit"
               disabled={status === 'sending' || status === 'sent'}
-              className="w-full flex items-center justify-center gap-2.5 bg-brand-blue text-[#04101f] font-head font-bold text-base rounded-xl py-4 hover:brightness-110 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(56,189,248,0.35)] transition-all disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none"
+              className="w-full flex items-center justify-center gap-3 bg-brand-blue text-[#04101f] font-head font-bold text-lg rounded-xl py-5 hover:brightness-110 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(56,189,248,0.35)] transition-all disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none"
             >
               {status === 'sending' && <>Sending…</>}
               {status === 'sent' && <>Sent ✓</>}
