@@ -7,7 +7,7 @@ const projects = [
     date: 'Ships late Sep 2026',
     title: 'Dhun',
     subtitle: 'Voice-agent runtime for clinic bookings',
-    blurb: 'End-to-end voice loop: browser mic → streaming STT → agent loop with a validated, authorized, audited tool layer → streaming TTS, with VAD-based barge-in that truncates conversation history on interruption so the agent and caller stay in sync. Hybrid retrieval (dense + BM25 + cross-encoder rerank) exposed as a tool. Eval harness with LLM-as-judge scoring per-trajectory, latency percentiles, and chaos injection across 10 failure types.',
+    blurb: 'End-to-end voice loop: browser mic → streaming STT → agent with a validated + authorized tool layer → streaming TTS. VAD-based barge-in truncates history on interruption. Hybrid retrieval (dense + BM25 + rerank) as a tool. Eval harness with LLM-as-judge + chaos injection.',
     metric: 'In progress · shipping late Sep 2026',
     tech: ['FastAPI', 'Postgres + pgvector', 'Redis', 'Deepgram', 'WebSockets', 'Docker'],
     source: null,
@@ -72,7 +72,7 @@ export default function Projects() {
           <article
             key={i}
             id={p.id}
-            className="scroll-mt-28 grid md:grid-cols-[1fr_1.5fr] rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-white/[0.02] to-transparent hover:-translate-y-1.5 hover:border-brand-blue/40 hover:shadow-[0_20px_50px_rgba(56,189,248,0.15)] transition-all"
+            className="scroll-mt-28 grid md:grid-cols-[1fr_1.5fr] md:min-h-[360px] rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-white/[0.02] to-transparent hover:-translate-y-1.5 hover:border-brand-blue/40 hover:shadow-[0_20px_50px_rgba(56,189,248,0.15)] transition-all"
           >
             <div className={`min-h-[220px] flex items-center justify-center bg-gradient-to-br ${p.accent} relative overflow-hidden`}>
               {p.image ? (

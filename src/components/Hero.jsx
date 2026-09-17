@@ -95,7 +95,7 @@ export default function Hero() {
 
           <p className="mt-10 max-w-2xl text-dim text-xl md:text-2xl leading-relaxed">
             RAG pipelines · real-time systems,{' '}
-            <span className="text-white font-medium">production since Year 2.</span>
+            <span className="text-white font-medium">production since Year 2 · 2 internships.</span>
           </p>
 
           <div className="mt-12 flex flex-wrap gap-4 items-center">
