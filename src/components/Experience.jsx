@@ -1,12 +1,15 @@
 import Section from './Section.jsx'
 
-const entries = [
+const experience = [
   {
     when: 'Sep — Oct 2026',
     where: 'NLLG · University of Technology Nuremberg',
     role: 'Research Intern — advised by Prof. Steffen Eger, supervised by Christoph Leiter (remote)',
     notes: 'Analysis paper on evaluation practice in generative-AI research — quantifying how often central claims rest on LLM-as-judge scores vs. BLEU/ROUGE, BERTScore/SBERT, or COMET/PickScore, and what fraction validate against human annotation. Running the related-work analysis for the survey.'
-  },
+  }
+]
+
+const entries = [
   {
     when: 'Jun 2026 — present',
     where: 'Robotics Team · MNNIT',
@@ -54,9 +57,24 @@ export default function Experience() {
       id="experience"
       eyebrow="Trajectory"
       title="Where I've been orbiting"
-      sub="Campus roles, leadership, and things I've won along the way."
+      sub="Research, campus roles, leadership, and things I've won along the way."
     >
-      <div className="grid md:grid-cols-2 gap-14">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-14">
+        <div>
+          <div className="eyebrow text-brand-pink mb-6">Experience</div>
+          <ol className="relative border-l border-white/10 space-y-8 pl-6">
+            {experience.map((e, i) => (
+              <li key={i} className="relative">
+                <span className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-bg border-2 border-brand-pink" />
+                <div className="eyebrow-sm text-brand-pink">{e.when}</div>
+                <div className="font-head text-lg md:text-xl mt-1 font-bold">{e.where}</div>
+                <div className="text-dim text-sm mt-1">{e.role}</div>
+                {e.notes && <p className="text-dim mt-3 leading-relaxed max-w-md text-sm">{e.notes}</p>}
+              </li>
+            ))}
+          </ol>
+        </div>
+
         <div>
           <div className="eyebrow text-brand-blue mb-6">Roles</div>
           <ol className="relative border-l border-white/10 space-y-8 pl-6">
