@@ -2,6 +2,12 @@ import Section from './Section.jsx'
 
 const entries = [
   {
+    when: 'Sep — Oct 2026',
+    where: 'NLLG · University of Technology Nuremberg',
+    role: 'Research Intern — advised by Prof. Steffen Eger, supervised by Christoph Leiter (remote)',
+    notes: 'Analysis paper on evaluation practice in generative-AI research — quantifying how often central claims rest on LLM-as-judge scores vs. BLEU/ROUGE, BERTScore/SBERT, or COMET/PickScore, and what fraction validate against human annotation. Running the related-work analysis for the survey.'
+  },
+  {
     when: 'Jun 2026 — present',
     where: 'Robotics Team · MNNIT',
     role: 'Perception & Autonomy — Self-Driving Car Project',
