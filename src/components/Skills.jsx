@@ -201,7 +201,7 @@ export default function Skills() {
             </div>
 
             {/* Title */}
-            <div className="font-head text-lg font-bold text-white relative z-10">
+            <div className="font-head text-xl md:text-2xl font-bold text-white relative z-10">
               {g.title}
             </div>
             <div
@@ -213,7 +213,7 @@ export default function Skills() {
             />
 
             {/* Items */}
-            <ul className="space-y-2 text-sm text-dim relative z-10">
+            <ul className="space-y-2.5 text-base text-dim relative z-10">
               {g.items.map((it) => (
                 <li key={it} className="flex items-start gap-2.5 group-hover:text-white/90 transition-colors">
                   <span

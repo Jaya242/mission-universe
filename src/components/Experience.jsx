@@ -67,9 +67,9 @@ export default function Experience() {
               <li key={i} className="relative">
                 <span className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-bg border-2 border-brand-pink" />
                 <div className="eyebrow-sm text-brand-pink">{e.when}</div>
-                <div className="font-head text-lg md:text-xl mt-1 font-bold">{e.where}</div>
-                <div className="text-dim text-sm mt-1">{e.role}</div>
-                {e.notes && <p className="text-dim mt-3 leading-relaxed max-w-md text-sm">{e.notes}</p>}
+                <div className="font-head text-xl md:text-2xl mt-1 font-bold">{e.where}</div>
+                <div className="text-dim text-base mt-1.5">{e.role}</div>
+                {e.notes && <p className="text-dim mt-3 leading-relaxed max-w-md text-base">{e.notes}</p>}
               </li>
             ))}
           </ol>
@@ -82,9 +82,9 @@ export default function Experience() {
               <li key={i} className="relative">
                 <span className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-bg border-2 border-brand-blue" />
                 <div className="eyebrow-sm text-brand-blue">{e.when}</div>
-                <div className="font-head text-lg md:text-xl mt-1 font-bold">{e.where}</div>
-                <div className="text-dim text-sm mt-1">{e.role}</div>
-                {e.notes && <p className="text-dim mt-3 leading-relaxed max-w-md text-sm">{e.notes}</p>}
+                <div className="font-head text-xl md:text-2xl mt-1 font-bold">{e.where}</div>
+                <div className="text-dim text-base mt-1.5">{e.role}</div>
+                {e.notes && <p className="text-dim mt-3 leading-relaxed max-w-md text-base">{e.notes}</p>}
               </li>
             ))}
           </ol>
@@ -98,12 +98,12 @@ export default function Experience() {
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">🏆</span>
                   <div>
-                    <div className="font-head text-lg font-bold text-white">{a.label}</div>
-                    <div className="text-dim text-sm">{a.where}</div>
+                    <div className="font-head text-xl font-bold text-white">{a.label}</div>
+                    <div className="text-dim text-base mt-0.5">{a.where}</div>
                   </div>
                   <div className="ml-auto eyebrow-sm text-brand-purple">{a.year}</div>
                 </div>
-                {a.notes && <p className="text-dim mt-3 text-sm leading-relaxed">{a.notes}</p>}
+                {a.notes && <p className="text-dim mt-3 text-base leading-relaxed">{a.notes}</p>}
               </div>
             ))}
           </div>
