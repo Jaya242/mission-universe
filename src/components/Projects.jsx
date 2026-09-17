@@ -65,7 +65,8 @@ export default function Projects() {
       id="projects"
       eyebrow="Missions"
       title="Exploration missions"
-      sub="Three shipped AI apps — live on HuggingFace Spaces, open on GitHub."
+      sub="Four missions. Three shipped, one in flight."
+      subClassName="font-head text-2xl md:text-3xl lg:text-4xl mt-8 max-w-4xl mx-auto leading-snug tracking-tight text-white/75 font-medium"
     >
       <div className="grid gap-8">
         {projects.map((p, i) => (

@@ -58,52 +58,53 @@ export default function Experience() {
       eyebrow="Trajectory"
       title="Where I've been orbiting"
       sub="Research, campus roles, leadership, and things I've won along the way."
+      subClassName="font-head italic text-base md:text-lg mt-5 max-w-xl mx-auto leading-relaxed text-white/60 font-light tracking-wide"
     >
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-14">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-20">
         <div>
-          <div className="eyebrow text-brand-pink mb-6">Experience</div>
+          <div className="font-head font-semibold uppercase tracking-[0.2em] text-brand-pink mb-8 text-lg md:text-xl">Experience</div>
           <ol className="relative border-l border-white/10 space-y-8 pl-6">
             {experience.map((e, i) => (
               <li key={i} className="relative">
                 <span className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-bg border-2 border-brand-pink" />
-                <div className="eyebrow-sm text-brand-pink">{e.when}</div>
-                <div className="font-head text-xl md:text-2xl mt-1 font-bold">{e.where}</div>
-                <div className="text-dim text-base mt-1.5">{e.role}</div>
-                {e.notes && <p className="text-dim mt-3 leading-relaxed max-w-md text-base">{e.notes}</p>}
+                <div className="font-head font-semibold uppercase tracking-[0.18em] text-brand-pink text-sm md:text-base">{e.when}</div>
+                <div className="font-head text-2xl md:text-3xl mt-2 font-bold">{e.where}</div>
+                <div className="text-dim text-lg mt-2">{e.role}</div>
+                {e.notes && <p className="text-dim mt-4 leading-relaxed max-w-md text-lg">{e.notes}</p>}
               </li>
             ))}
           </ol>
         </div>
 
         <div>
-          <div className="eyebrow text-brand-blue mb-6">Roles</div>
+          <div className="font-head font-semibold uppercase tracking-[0.2em] text-brand-blue mb-8 text-lg md:text-xl">Roles</div>
           <ol className="relative border-l border-white/10 space-y-8 pl-6">
             {entries.map((e, i) => (
               <li key={i} className="relative">
                 <span className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-bg border-2 border-brand-blue" />
-                <div className="eyebrow-sm text-brand-blue">{e.when}</div>
-                <div className="font-head text-xl md:text-2xl mt-1 font-bold">{e.where}</div>
-                <div className="text-dim text-base mt-1.5">{e.role}</div>
-                {e.notes && <p className="text-dim mt-3 leading-relaxed max-w-md text-base">{e.notes}</p>}
+                <div className="font-head font-semibold uppercase tracking-[0.18em] text-brand-blue text-sm md:text-base">{e.when}</div>
+                <div className="font-head text-2xl md:text-3xl mt-2 font-bold">{e.where}</div>
+                <div className="text-dim text-lg mt-2">{e.role}</div>
+                {e.notes && <p className="text-dim mt-4 leading-relaxed max-w-md text-lg">{e.notes}</p>}
               </li>
             ))}
           </ol>
         </div>
 
         <div>
-          <div className="eyebrow text-brand-purple mb-6">Achievements</div>
+          <div className="font-head font-semibold uppercase tracking-[0.2em] text-brand-purple mb-8 text-lg md:text-xl">Achievements</div>
           <div className="space-y-5">
             {awards.map((a, i) => (
-              <div key={i} className="rounded-2xl border border-white/10 bg-white/[0.02] p-5 hover:border-brand-purple/40 transition-colors">
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">🏆</span>
+              <div key={i} className="rounded-2xl border border-white/10 bg-white/[0.02] p-7 md:p-8 hover:border-brand-purple/40 transition-colors">
+                <div className="flex items-start gap-4">
+                  <span className="text-3xl mt-0.5">🏆</span>
                   <div>
-                    <div className="font-head text-xl font-bold text-white">{a.label}</div>
-                    <div className="text-dim text-base mt-0.5">{a.where}</div>
+                    <div className="font-head text-2xl md:text-3xl font-bold text-white leading-tight">{a.label}</div>
+                    <div className="text-dim text-lg mt-1.5">{a.where}</div>
                   </div>
-                  <div className="ml-auto eyebrow-sm text-brand-purple">{a.year}</div>
+                  <div className="ml-auto font-head font-semibold uppercase tracking-[0.18em] text-brand-purple text-sm md:text-base">{a.year}</div>
                 </div>
-                {a.notes && <p className="text-dim mt-3 text-base leading-relaxed">{a.notes}</p>}
+                {a.notes && <p className="text-dim mt-4 text-lg leading-relaxed">{a.notes}</p>}
               </div>
             ))}
           </div>

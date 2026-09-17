@@ -160,11 +160,11 @@ export default function Skills() {
         </div>
       </div>
 
-      <div className="grid sm:grid-cols-2 md:grid-cols-5 gap-4 mt-16">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mt-16">
         {groups.map((g, i) => (
           <div
             key={g.title}
-            className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.03] via-white/[0.01] to-transparent p-6 overflow-hidden transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_45px_rgba(0,0,0,0.4)]"
+            className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.03] via-white/[0.01] to-transparent p-8 min-h-[380px] overflow-hidden transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_45px_rgba(0,0,0,0.4)]"
             style={{ '--accent': g.color }}
             onMouseEnter={(e) => e.currentTarget.style.borderColor = g.color + '55'}
             onMouseLeave={(e) => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'}
@@ -183,12 +183,12 @@ export default function Skills() {
             </div>
 
             {/* Top row: number + glyph badge */}
-            <div className="flex items-center justify-between mb-5 relative z-10">
-              <span className="hero-headline text-[42px] leading-none text-white/[0.07] group-hover:text-white/[0.14] transition-colors">
+            <div className="flex items-center justify-between mb-6 relative z-10">
+              <span className="font-head font-light text-xl text-white/40 tracking-[0.25em] group-hover:text-white/70 transition-colors">
                 {String(i + 1).padStart(2, '0')}
               </span>
               <span
-                className="w-10 h-10 rounded-xl flex items-center justify-center font-head font-bold text-lg border transition-all group-hover:scale-110 group-hover:rotate-[-6deg]"
+                className="w-12 h-12 rounded-xl flex items-center justify-center font-head font-bold text-xl border transition-all group-hover:scale-110 group-hover:rotate-[-6deg]"
                 style={{
                   borderColor: g.color + '66',
                   color: g.color,
@@ -201,19 +201,19 @@ export default function Skills() {
             </div>
 
             {/* Title */}
-            <div className="font-head text-xl md:text-2xl font-bold text-white relative z-10">
+            <div className="font-head text-2xl md:text-3xl font-bold text-white relative z-10">
               {g.title}
             </div>
             <div
-              className="h-[2px] mt-2.5 mb-4 rounded-full transition-all duration-500"
+              className="h-[2px] mt-3 mb-5 rounded-full transition-all duration-500"
               style={{
                 background: `linear-gradient(90deg, ${g.color}, transparent)`,
-                width: '2rem'
+                width: '2.5rem'
               }}
             />
 
             {/* Items */}
-            <ul className="space-y-2.5 text-base text-dim relative z-10">
+            <ul className="space-y-3 text-lg text-dim relative z-10">
               {g.items.map((it) => (
                 <li key={it} className="flex items-start gap-2.5 group-hover:text-white/90 transition-colors">
                   <span

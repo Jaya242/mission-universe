@@ -6,7 +6,8 @@ export default function About() {
       id="about"
       eyebrow="About"
       title="The brain behind the model."
-      sub="Mech eng at MNNIT Allahabad — teaching myself to ship AI systems that actually work."
+      sub="Mech eng at MNNIT Allahabad — shipping production ML systems since Year 2."
+      subClassName="font-head text-2xl md:text-3xl lg:text-4xl mt-8 max-w-4xl mx-auto leading-snug tracking-tight text-white/75 font-medium"
     >
       <div className="grid md:grid-cols-5 gap-10 md:gap-14 items-start">
         <div className="md:col-span-3 space-y-5">
