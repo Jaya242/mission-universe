@@ -13,7 +13,7 @@ export default function Section({ id, eyebrow, title, sub, children, className =
             <h2 className="font-head text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.1]">{title}</h2>
           )}
           {sub && (
-            <p className="text-dim text-lg mt-5 max-w-2xl mx-auto leading-relaxed">{sub}</p>
+            <p className="font-mono text-dim text-xl mt-5 max-w-3xl mx-auto leading-relaxed tracking-tight">{sub}</p>
           )}
         </div>
       )}
