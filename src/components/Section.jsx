@@ -1,6 +1,6 @@
 export default function Section({ id, eyebrow, title, sub, children, className = '' }) {
   return (
-    <section id={id} className={`relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32 ${className}`}>
+    <section id={id} className={`relative z-10 max-w-[1600px] mx-auto px-6 md:px-12 py-24 md:py-32 ${className}`}>
       {(eyebrow || title || sub) && (
         <div className="text-center mb-16">
           {eyebrow && (

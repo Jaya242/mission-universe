@@ -2,6 +2,20 @@ import Section from './Section.jsx'
 
 const projects = [
   {
+    id: 'project-dhun',
+    tag: 'Mission 04 · In flight',
+    date: 'Ships late Sep 2026',
+    title: 'Dhun',
+    subtitle: 'Voice-agent runtime for clinic bookings',
+    blurb: 'End-to-end voice loop: browser mic → streaming STT → agent loop with a validated, authorized, audited tool layer → streaming TTS, with VAD-based barge-in that truncates conversation history on interruption so the agent and caller stay in sync. Hybrid retrieval (dense + BM25 + cross-encoder rerank) exposed as a tool. Eval harness with LLM-as-judge scoring per-trajectory, latency percentiles, and chaos injection across 10 failure types.',
+    metric: 'In progress · shipping late Sep 2026',
+    tech: ['FastAPI', 'Postgres + pgvector', 'Redis', 'Deepgram', 'WebSockets', 'Docker'],
+    source: null,
+    demo: null,
+    accent: 'from-brand-blue/40 to-brand-pink/30',
+    image: null
+  },
+  {
     id: 'project-crisis-reranker',
     tag: 'Mission 01',
     date: 'Jun 2026',
@@ -108,8 +122,15 @@ export default function Projects() {
                 ))}
               </div>
               <div className="flex gap-6 mt-6">
-                <a href={p.source} target="_blank" rel="noopener" className="eyebrow-sm border-b border-white/30 hover:border-brand-blue hover:text-brand-blue transition pb-0.5">View source</a>
-                <a href={p.demo} className="eyebrow-sm border-b border-white/30 hover:border-brand-blue hover:text-brand-blue transition pb-0.5">Live demo →</a>
+                {p.source && (
+                  <a href={p.source} target="_blank" rel="noopener" className="eyebrow-sm border-b border-white/30 hover:border-brand-blue hover:text-brand-blue transition pb-0.5">View source</a>
+                )}
+                {p.demo && (
+                  <a href={p.demo} className="eyebrow-sm border-b border-white/30 hover:border-brand-blue hover:text-brand-blue transition pb-0.5">Live demo →</a>
+                )}
+                {!p.source && !p.demo && (
+                  <span className="eyebrow-sm text-dim">Repo goes public on ship day</span>
+                )}
               </div>
             </div>
           </article>
